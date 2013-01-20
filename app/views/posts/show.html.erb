@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Kod:</b>
+  <%= @post.kod %>
+</p>
+
+<p>
+  <b>Ev sahibi:</b>
+  <%= @post.ev_sahibi %>
+</p>
+
+<p>
+  <b>Misafir:</b>
+  <%= @post.misafir %>
+</p>
+
+<p>
+  <b>Tahmin:</b>
+  <%= @post.tahmin %>
+</p>
+
+<p>
+  <b>Oran:</b>
+  <%= @post.oran %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @post.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

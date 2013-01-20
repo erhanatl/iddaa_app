@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kod: 1
+  ev_sahibi: MyString
+  misafir: MyString
+  tahmin: MyString
+  oran: 1.5
+  user_id: 1
+
+two:
+  kod: 1
+  ev_sahibi: MyString
+  misafir: MyString
+  tahmin: MyString
+  oran: 1.5
+  user_id: 1

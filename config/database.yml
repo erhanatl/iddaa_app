@@ -14,7 +14,7 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   database: iddaa_dev
   pool: 5
   username: iddaa
