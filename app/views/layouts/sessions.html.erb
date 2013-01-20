@@ -15,14 +15,17 @@
   <div id="main">
     <div id="header">
       <div id="logo">
-        <h1>İddaa<%= link_to 'Köşesi', root_path %></h1>
+        <h1>İddaa<a href="#">Köşesi</a></h1>
         <div class="slogan">Uzmanlardan kazandıran yorumlar</div>
       </div>
       <div id="menubar">
         <ul id="menu">
           <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
           <%= nav_link 'Ana Sayfa', root_path %>
-          <%= nav_link 'Tahmin Ekle', new_post_path %>
+          <li><a href="examples.html">Examples</a></li>
+          <li><a href="page.html">A Page</a></li>
+          <li><a href="another_page.html">Another Page</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
 				
       </div>
@@ -55,12 +58,9 @@
         </div>
       </div>
 
-
+<%= yield %>
    
 	  <div id="content">
-			
-			<%= yield %>
-			
       <!-- insert the page content here -->
       <h1>Welcome to the simplestyle_7 template</h1>
       <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
@@ -72,9 +72,7 @@
       <ul>
         <li>Internet Explorer 8</li>
         <li>Internet Explorer 7</li>
-        <li>FireFox 3.5</li>
-        <li>Google Chrome 6</li>
-        <li>Safari 4</li>
+       
       </ul>
     </div>
   </div>

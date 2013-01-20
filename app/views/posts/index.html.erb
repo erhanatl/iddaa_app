@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<h1>Taze tahminler</h1>
 
 <table>
   <tr>
@@ -7,10 +7,8 @@
     <th>Misafir</th>
     <th>Tahmin</th>
     <th>Oran</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Uzman</th>
+    
   </tr>
 
 <% @posts.each do |post| %>
@@ -20,14 +18,12 @@
     <td><%= post.misafir %></td>
     <td><%= post.tahmin %></td>
     <td><%= post.oran %></td>
-    <td><%= post.user_id %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= post.user_id %></td>  
   </tr>
+  
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+
