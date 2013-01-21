@@ -10,7 +10,7 @@
     <th>Uzman</th>
     
   </tr>
-
+	
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.kod %></td>
@@ -18,7 +18,7 @@
     <td><%= post.misafir %></td>
     <td><%= post.tahmin %></td>
     <td><%= post.oran %></td>
-    <td><%= post.user_id %></td>  
+    <td><%= post.user.try(:username) %></td>  
   </tr>
   
 <% end %>
