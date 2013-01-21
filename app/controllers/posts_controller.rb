@@ -3,10 +3,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all(:order => 'id DESC', :limit =>10)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html  # index.html.erb
       format.json { render json: @posts }
     end
   end
@@ -25,12 +25,15 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    
     @post = Post.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "newpost"}# new.html.erb
       format.json { render json: @post }
+      
     end
+    
   end
 
   # GET /posts/1/edit
