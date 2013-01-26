@@ -12,30 +12,46 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :kod %><br />
+    <b><%= f.label :kod %></b><br /></b>
     <%= f.number_field :kod %>
   </div>
   <div class="field">
-    <%= f.label :ev_sahibi %><br />
+    <b><%= f.label :ev_sahibi %></b><br />
     <%= f.text_field :ev_sahibi %>
   </div>
   <div class="field">
-    <%= f.label :misafir %><br />
+    <b><%= f.label :misafir %></b><br />
     <%= f.text_field :misafir %>
   </div>
-  <div class="field">
-    <%= f.label :tahmin %><br />
+	
+	<div class="field">
+		<b><%= f.label :sembol %></b><br />
+		<%= f.select :sembol, [1,2,3,4] %> 1:Banko, 2:Geçerli, 3:Riskli, 4:Oynanmaz 
+		
+  </div>
+	
+	<div class="field">
+    <b><%= f.label :tahmin %></b><br />
     <%= f.text_field :tahmin %>
   </div>
   <div class="field">
-    <%= f.label :oran %><br />
+    <b><%= f.label :oran %></b><br />
     <%= f.text_field :oran %>
+  </div><br><br>
+	<div color:red>------------ Maç bittikten sonra doldurulacak bölüm -----------</div>
+  <br><br><div class="field"> 
+    <b><%= f.label :skor %></b><br />
+    <%= f.text_field :skor %> 
   </div>
   <div class="field">
+    <b><%= f.label :sonuç %></b><br /> 
+    <%= f.select :sonuc, {"Tuttu" => true, "Tutmadı" => false}%> 
+  </div>
+	<div class="field">
     <%= f.hidden_field :user_id %>
     
   </div>
-  <div class="actions">
+  <br><br><div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

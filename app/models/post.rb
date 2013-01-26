@@ -5,5 +5,5 @@ class Post < ActiveRecord::Base
   validates :misafir, presence: true
   validates :oran, presence: true
   validates :tahmin, presence: true
-  attr_accessible :ev_sahibi, :kod, :misafir, :oran, :tahmin, :user_id
+  attr_accessible :ev_sahibi, :kod, :misafir, :oran, :tahmin, :user_id, :sembol
 end

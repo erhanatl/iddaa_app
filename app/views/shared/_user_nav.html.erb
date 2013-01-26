@@ -1,20 +1,12 @@
-<ul class="nav">
+
   <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Çıkış', destroy_user_session_path, :method=>'delete' %>        
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Giriş', new_user_session_path %>  
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
+
     <%= link_to 'Düzenle', edit_user_registration_path %>
-    </li>
+		<%= link_to 'Çıkış', destroy_user_session_path, :method=>'delete' %>        
+
   <% else %>
-    <li>
-    <%= link_to 'Kayıt', new_user_registration_path %>
-    </li>
+
+    <%= link_to 'Giriş', new_user_session_path %>  
+
   <% end %>
-	</ul>
+  

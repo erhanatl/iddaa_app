@@ -29,7 +29,13 @@
   <b>User:</b>
   <%= @post.user_id %>
 </p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<p>
+  <b>Skor:</b>
+<%= @post.skor%>
+</p>
+<p>
+  <b>Sonuç:</b>
+<%= @post.sonuc%>
+</p>
+<%= link_to 'Düzenle', edit_post_path(@post) %> |
+<%= link_to 'Geri', posts_path %>

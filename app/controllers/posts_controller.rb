@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!, :except => [:index]
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all(:order => 'id DESC', :limit =>10)
-
     respond_to do |format|
       format.html  # index.html.erb
       format.json { render json: @posts }

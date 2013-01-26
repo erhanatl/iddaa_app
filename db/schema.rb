@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130120233117) do
+ActiveRecord::Schema.define(:version => 20130125173809) do
+
+  create_table "ligs", :id => false, :force => true do |t|
+    t.string "id",   :limit => nil, :null => false
+    t.string "name", :limit => nil
+  end
 
   create_table "posts", :force => true do |t|
     t.integer  "kod"
@@ -20,6 +25,15 @@ ActiveRecord::Schema.define(:version => 20130120233117) do
     t.string   "tahmin"
     t.float    "oran"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "sembol"
+    t.string   "skor"
+    t.boolean  "sonuc"
+  end
+
+  create_table "sembols", :force => true do |t|
+    t.integer  "sec"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

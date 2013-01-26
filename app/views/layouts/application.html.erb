@@ -18,7 +18,9 @@
         <h1>İddaa<%= link_to 'Köşesi', root_path %></h1>
         <div class="slogan">Uzmanlardan kazandıran tahminler</div>
       </div>
+			
       <%= render :partial => "shared/navigation"%>
+			
     </div>
     <div id="site_content">
       <div id="sidebar_container">
@@ -74,10 +76,9 @@
   <div id="footer">
 		
 		
-    <p>Copyright &copy; İddaa Köşesi | <%= link_to "HTML5", "http://validator.w3.org/check?uri=referer" %> | <%= link_to "CSS", "http://jigsaw.w3.org/css-validator/check/referer" %></p>
+    <p>Copyright &copy; İddaa Köşesi | <%= link_to "HTML5", "http://validator.w3.org/check?uri=referer" %> | <%= link_to "CSS", "http://jigsaw.w3.org/css-validator/check/referer" %> | <%= render :partial => "shared/user_nav"%></p>
   </div>
 	
-	<%= render :partial => "shared/user_nav"%>
 </div>
 
 </body>

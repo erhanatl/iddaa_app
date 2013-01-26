@@ -1,27 +1,49 @@
 <h1>Taze tahminler</h1>
 
-<table>
+<table width="100%" class="gridtable">
   <tr>
-    <th>Kod</th>
-    <th>Ev sahibi</th>
-    <th>Misafir</th>
-    <th>Tahmin</th>
-    <th>Oran</th>
+    <th width="8%">Kod</th>
+    <th width="20%">Ev sahibi</th>
+    <th width="20%">Misafir</th>
+		<th width="8%">Tahmin</th>
+    <th width="8%">Oran</th>
     <th>Uzman</th>
-    
+    <th>Sembol</th>
+    <th>Skor</th>
+    <th>Sonuç</th>
   </tr>
 	
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.kod %></td>
-    <td><%= post.ev_sahibi %></td>
-    <td><%= post.misafir %></td>
-    <td><%= post.tahmin %></td>
-    <td><%= post.oran %></td>
+    <td width="8%"><%= link_to post.kod, edit_post_path(post) %></td>
+    <td width="20%"><%= post.ev_sahibi %></td>
+    <td width="20%"><%= post.misafir %></td>
+    <td width="8%"><%= post.tahmin %></td>
+    <td width="8%"><%= post.oran %></td>
     <td><%= post.user.try(:username) %></td>  
+		<td><% if post.sembol == 1 %>  
+			<%= image_tag('banko.png', :size => '50x22') %>
+		<% elsif post.sembol == 2 %>
+			<%= image_tag('gecerli.png', :size => '50x22') %>
+			<% elsif post.sembol == 3 %>
+				<%= image_tag('riskli.png', :size => '50x22') %>
+				<% else %>
+			<%= image_tag('oynanmaz.png', :size => '50x22') %>
+			<% end %></td>
+	    <td><%= post.skor %></td>
+			<td><% if post.sonuc == true %>
+			    <%= image_tag("check.png", :size => "23x22", :alt => "Tuttu") %>
+			<% elsif post.sonuc == false %> 
+			    <%= image_tag("cross.png", :size => "23x22", :alt => "Tutmadı") %>
+				<% else %>
+					<%= image_tag("sonuclanmadi.png", :size => "23x22", :alt => "Sonuçlanmadı") %>
+			<% end %>
+	   </td>
   </tr>
   
 <% end %>
+
+
 </table>
 
 <br />
