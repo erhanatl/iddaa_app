@@ -1,8 +1,10 @@
 
   <% if user_signed_in? %>
-
-    <%= link_to 'Düzenle', edit_user_registration_path %>
-		<%= link_to 'Çıkış', destroy_user_session_path, :method=>'delete' %>        
+	  <%= link_to 'Tahmin Ekle', new_post_path %> |
+		<%= link_to 'Yorum Yaz', new_yorum_path %> |
+    <%= link_to 'Profili düzenle', edit_user_registration_path %> |
+		<%= link_to 'Çıkış', destroy_user_session_path, :method=>'delete' %> 
+		       
 
   <% else %>
 

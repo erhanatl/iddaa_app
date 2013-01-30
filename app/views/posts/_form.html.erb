@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <b><%= f.label :sonuç %></b><br /> 
-    <%= f.select :sonuc, {"Tuttu" => true, "Tutmadı" => false}%> 
+    <%= f.select :sonuc, {"-" => nil, "Tuttu" => true, "Tutmadı" => false}%> 
   </div>
 	<div class="field">
     <%= f.hidden_field :user_id %>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Iddaa</title>
+  <title>İddaa Köşesi</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Stalemate&subset=latin-ext" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext" />
-	<p class="notice"><%= notice %></p>
-	       <p class="alert"><%= alert %></p>
+	
 </head>
 <body>
 	
@@ -26,57 +25,42 @@
       <div id="sidebar_container">
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
+          <h3>Editör'den</h3>
+          <h4>Doğan Gazioğlu</h4>
+          <h5>01 Mart 2013</h5>
+          <p>İddaa Köşesi yenilenen altyapısı ve yeni yüzü ile hizmetinizde..<br /><a href="#">devamı</a></p>
+        </div>
+        <%= image_tag  "paperclip.png", :class => "paperclip" %>
+				<div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
-        <h4>What's the News?</h4>
-        <h5>1st July 2011</h5>
-        <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>
+        <h3>Garanti!</h3>
+        <h4>Minimum oran garantisi.</h4>
+        <p>İddaa köşesi düşük oranlı tahminleri yayınlamaz. <h2>Bizim için 'Banko' demek, yüksek ihtimal ile yüksek oran demektir.</h2></p>
         </div>
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
-          <h3>Newsletter</h3>
-          <p>If you would like to receive our newletter, please enter your email address and click 'Subscribe'.</p>
-          <form method="post" action="#" id="subscribe">
-            <p style="padding: 0 0 9px 0;"><input class="search" type="text" name="email_address" value="your email address" onclick="javascript: document.forms['subscribe'].email_address.value=''" /></p>
-            <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
-          </form>
+          <h3>Yazar ol!</h3>
+          <p>Ben de bu işte Uzman'ım diyorsan, bize katılabilirsin.</p>
+         <h4><p>Katılım şartları için buraya tıkla.</p></h4>
         </div>
-        <%= image_tag  "paperclip.png", :class => "paperclip" %>
-        <div class="sidebar">
-          <h3>Latest Blog</h3>
-          <h4>Website Goes Live</h4>
-          <h5>1st July 2011</h5>
-          <p>We have just launched our new website. Take a look around, we'd love to know what you think.....<br /><a href="#">read more</a></p>
-        </div>
+        
+        
       </div>
 
 
    
 	  <div id="content">
-			
+			<p class="notice"><%= notice %></p>
+			 <p class="alert"><%= alert %></p>
 			<%= yield %>
 			
-      <!-- insert the page content here -->
-      <h1>Welcome to the simplestyle_7 template</h1>
-      <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
-      <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS</strong>, and can be validated using the links in the footer.</p>
-      <p>You can view more free HTML5 web templates <a href="http://www.html5webtemplates.co.uk">here</a>.</p>
-      <p>This template is a fully functional 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design.</p>
-      <h2>Browser Compatibility</h2>
-      <p>This template has been tested in the following browsers:</p>
-      <ul>
-        <li>Internet Explorer 8</li>
-        <li>Internet Explorer 7</li>
-        <li>FireFox 3.5</li>
-        <li>Google Chrome 6</li>
-        <li>Safari 4</li>
-      </ul>
+      
     </div>
   </div>
   <div id="footer">
 		
 		
-    <p>Copyright &copy; İddaa Köşesi | <%= link_to "HTML5", "http://validator.w3.org/check?uri=referer" %> | <%= link_to "CSS", "http://jigsaw.w3.org/css-validator/check/referer" %> | <%= render :partial => "shared/user_nav"%></p>
+    <p>Copyright &copy; İddaa Köşesi | <%= render :partial => "shared/user_nav"%></p>
   </div>
 	
 </div>

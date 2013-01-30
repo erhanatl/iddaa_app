@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @yorum.user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @yorum.title %>
+</p>
+
+<p>
+  <b>Yazi:</b>
+  <%= @yorum.yazi %>
+</p>
+
+
+<%= link_to 'Edit', edit_yorum_path(@yorum) %> |
+<%= link_to 'Back', yorums_path %>

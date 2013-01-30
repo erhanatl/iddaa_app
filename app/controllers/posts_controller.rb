@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all(:order => 'id DESC', :limit =>10)
+    @posts = Post.all(:order => 'id DESC', :limit =>20)
     respond_to do |format|
       format.html  # index.html.erb
       format.json { render json: @posts }
@@ -43,7 +43,6 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    
     @post = Post.new(params[:post])
     @post.user_id = current_user.id
 

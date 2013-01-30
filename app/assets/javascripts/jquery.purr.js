@@ -184,3 +184,9 @@ $(function() {
     if( ! o.attr('title') && o.attr('alt') ) o.attr('title', o.attr('alt') );
   });
 });
+
+$('.bordered tr').mouseover(function(){
+    $(this).addClass('highlight');
+}).mouseout(function(){
+    $(this).removeClass('highlight');
+});

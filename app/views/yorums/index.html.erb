@@ -1,0 +1,23 @@
+<h1>Yorumlar</h1>
+
+<table>
+  <tr>
+    
+    <th>Başlık</th>
+		<th>Uzman</th>
+   
+  </tr>
+
+<% @yorums.each do |yorum| %>
+  <tr>
+    
+    <td><%= link_to 'Edit', yorum.title %></td>
+    
+		<td><%= yorum.user.try(:username) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
