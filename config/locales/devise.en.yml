@@ -16,7 +16,7 @@ en:
     failure:
       already_authenticated: 'Zaten giriş yaptın.'
       unauthenticated: 'Devam etmek için giriş yapmalısın.'
-      unconfirmed: 'DEvam etmek için hesabını onaylamalısın.'
+      unconfirmed: 'Devam etmek için hesabını onaylamalısın.'
       locked: 'Hesabın kilitli.'
       not_found_in_database: 'Geçersiz email ya da parola.'
       invalid: 'Geçersiz email ya da parola.'
@@ -24,12 +24,12 @@ en:
       timeout: 'Oturumun sonlandı, tekrar giriş yapmalısın.'
       inactive: 'Hesabın henüz onaylanmadı.'
     sessions:
-      signed_in: 'Giriş yaptın.'
-      signed_out: 'Çıkış yaptın.'
+      signed_in: 'Oturum açıldı.'
+      signed_out: 'Oturum kapatıldı.'
     passwords:
       send_instructions: 'Bir kaç dakika içinde parolanı nasıl sıfırlayacağını anlatan bir email alacaksın.'
       updated: 'Parolan başarı ile değiştirildi ve oturum açıldı.'
-      updated_not_active: 'YParolan başarı ile değiştirildi.'
+      updated_not_active: 'Parolan başarı ile değiştirildi.'
       send_paranoid_instructions: "Bir kaç dakika içinde konu ile ilgili email alacaksınız."
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
     confirmations:

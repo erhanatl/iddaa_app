@@ -1,9 +1,9 @@
-<h2>Profil <%= resource_name.to_s.humanize %></h2>
+<h2>Profil</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 	
-	<div><%= f.label :username %><br />
+	<div><%= f.label :username, "Kullanıcı Adı" %><br />
 		<%= f.text_field :username, :autofocus => true %></div>
 		<br />
   <div><%= f.label :email %><br />
@@ -11,16 +11,16 @@
 
    <br />
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div><%= f.label :password, "Yeni Parola" %> <i>(değiştirmek istemiyorsan boş bırak)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 <br />
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :password_confirmation, "Parolayı tekrarla" %><br />
   <%= f.password_field :password_confirmation %></div>
 <br />
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div><%= f.label :current_password, "Parola"%> <i>(değişiklikleri onaylamak için şimdiki parolangirmek gerekiyor)</i><br />
   <%= f.password_field :current_password %></div>
 <br />
-  <div><%= f.submit "Update" %></div>
+  <div><%= f.submit "Güncelle" %></div>
 <% end %>
 
 <h3>Hesabımı kapat</h3>

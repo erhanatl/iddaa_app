@@ -26,7 +26,7 @@
 	
 	<div class="field">
 		<b><%= f.label :sembol %></b><br />
-		<%= f.select :sembol, [1,2,3,4] %> 1:Banko, 2:Geçerli, 3:Riskli, 4:Oynanmaz 
+		<%= f.select(:sembol, [["Banko", 1], ["Uygun", 2], ["Riskli", 3], ["Oynanmaz", 4]]) %>
 		
   </div>
 	
@@ -52,6 +52,6 @@
     
   </div>
   <br><br><div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Gönder" %>
   </div>
 <% end %>
