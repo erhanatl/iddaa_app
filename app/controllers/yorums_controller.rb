@@ -1,5 +1,5 @@
 class YorumsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index, :show]
   # GET /yorums
   # GET /yorums.json
   def index
