@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index, :show]
   # GET /posts
   # GET /posts.json
   def index
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post = Post.new
 
     respond_to do |format|
-      format.html { render :layout => "newpost"}# new.html.erb
+      format.html # new.html.erb
       format.json { render json: @post }
       
     end

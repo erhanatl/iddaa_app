@@ -7,8 +7,7 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Stalemate&subset=latin-ext" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext" />
-	<p class="notice"><%= notice %></p>
-	       <p class="alert"><%= alert %></p>
+	
 </head>
 <body>
 	
@@ -18,51 +17,65 @@
         <h1>İddaa<%= link_to 'Köşesi', root_path %></h1>
         <div class="slogan">Uzmanlardan kazandıran tahminler</div>
       </div>
-    
-		
-		 <%= render :partial => "shared/navigation"%>
-		 
-		 
+			
+      <%= render :partial => "shared/navigation"%>
+			
     </div>
     <div id="site_content">
       <div id="sidebar_container">
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
+          <h3>Editör'den</h3>
+          <h4>Doğan Gazioğlu</h4>
+          <h5>01 Mart 2013</h5>
+          <p>İddaa Köşesi yenilenen altyapısı ve yeni yüzü ile hizmetinizde..<br /><a href="#">devamı</a></p>
+        </div>
+        <%= image_tag  "paperclip.png", :class => "paperclip" %>
+				<div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>İpucu</h3>
-        <h4>What's the News?</h4>
-        <h5>1st July 2011</h5>
-        <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>
+        <h3>Garanti!</h3>
+        <h4>Minimum oran garantisi.</h4>
+        <p>İddaa köşesi düşük oranlı tahminleri yayınlamaz. <h2>Bizim için 'Banko' demek, yüksek ihtimal ile yüksek oran demektir.</h2></p>
         </div>
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
-          <h3>Newsletter</h3>
-          <p>If you would like to receive our newletter, please enter your email address and click 'Subscribe'.</p>
-          <form method="post" action="#" id="subscribe">
-            <p style="padding: 0 0 9px 0;"><input class="search" type="text" name="email_address" value="your email address" onclick="javascript: document.forms['subscribe'].email_address.value=''" /></p>
-            <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
-          </form>
+          <h3>Yazar ol!</h3>
+          <p>Ben de bu işte Uzman'ım diyorsan, bize katılabilirsin.</p>
+         <h4><p>Katılım şartları için buraya tıkla.</p></h4>
         </div>
-        <%= image_tag  "paperclip.png", :class => "paperclip" %>
-        <div class="sidebar">
-          <h3>Latest Blog</h3>
-          <h4>Website Goes Live</h4>
-          <h5>1st July 2011</h5>
-          <p>We have just launched our new website. Take a look around, we'd love to know what you think.....<br /><a href="#">read more</a></p>
-        </div>
+        
+        
       </div>
-			<div id="content">
-<%= yield %>
-</div>
-	  
+
+
+   
+	  <div id="content">
+			<p class="notice"><%= notice %></p>
+			 <p class="alert"><%= alert %></p>
+			<%= yield %>
+			
+      
+    </div>
   </div>
   <div id="footer">
 		
-    <p>Copyright &copy; İddaa Köşesi | <%= link_to "HTML5", "http://validator.w3.org/check?uri=referer" %> | <%= link_to "CSS", "http://jigsaw.w3.org/css-validator/check/referer" %></p>
+		
+    <p>Copyright &copy; İddaa Köşesi | <%= render :partial => "shared/user_nav"%></p>
+
   </div>
 	
-	
-	<%= render :partial => "shared/user_nav"%>
 </div>
+<script type="text/javascript">
+   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+   var disqus_shortname = 'iddaakosesi'; // required: replace example with your forum shortname
+
+   /* * * DON'T EDIT BELOW THIS LINE * * */
+   (function () {
+       var s = document.createElement('script'); s.async = true;
+       s.type = 'text/javascript';
+       s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+   }());
+   </script>
 </body>
 </html>

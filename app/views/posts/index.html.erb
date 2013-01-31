@@ -11,6 +11,7 @@
 		<th>Uzman</th>
     <th width="5%">Skor</th>
     <th width="8%">Sonuç</th>
+		<th width="8%">Ahkam</th>
   </tr>
 	
 <% @posts.each do |post| %>
@@ -39,7 +40,10 @@
 					<%= image_tag("sonuclanmadi.png", :size => "23x22", :alt => "Sonuçlanmadı") %>
 			<% end %>
 	   </td>
-  </tr>
+  <td>
+<a href="<%= post_url(post) + '#disqus_thr...d'%>">Kes</a>
+ </td>
+	</tr>
   
 <% end %>
 

@@ -2,13 +2,15 @@ Iddaa::Application.routes.draw do
   resources :yorums
 
 
-  devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_up => 'kayitolmayageldim'}
 
   resources :posts
   match '/canli' => 'pages#canli'
   match '/semboller' => 'pages#semboller'
   match '/iletisim' => 'pages#iletisim'
-
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

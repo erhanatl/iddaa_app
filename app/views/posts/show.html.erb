@@ -1,41 +1,69 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Kod:</b>
-  <%= @post.kod %>
-</p>
+<table width="100%" class="bordered">
+  <tr>
+    <th width="5%">Kod</th>
+    <th width="20%">Ev sahibi</th>
+    <th width="20%">Misafir</th>
+		<th width="8%">Tahmin</th>
+    <th width="8%">Oran</th>
+    <th width="9%">Sembol</th>
+		<th>Uzman</th>
+    <th width="5%">Skor</th>
+    <th width="8%">Sonuç</th>
+  </tr>
+	
 
-<p>
-  <b>Ev sahibi:</b>
-  <%= @post.ev_sahibi %>
-</p>
+  <tr>
+    <td width="5%"><%= @post.kod %></td>
+    <td width="20%"><%= @post.ev_sahibi %></td>
+    <td width="20%"><%= @post.misafir %></td>
+    <td width="5%"><%= @post.tahmin %></td>
+    <td width="8%"><%= @post.oran %></td> 
+		<td width="9%"><% if @post.sembol == 1 %>  
+			<%= image_tag('banko.png', :size => '50x22') %>
+		<% elsif @post.sembol == 2 %>
+			<%= image_tag('uygun.png', :size => '50x22') %>
+			<% elsif @post.sembol == 3 %>
+				<%= image_tag('riskli.png', :size => '50x22') %>
+				<% else %>
+			<%= image_tag('oynanmaz.png', :size => '50x22') %>
+			<% end %></td>
+			<td><%= @post.user.try(:username) %></td> 
+	    <td width="8%"><%= @post.skor %></td>
+			<td width="8%"><% if @post.sonuc == true %>
+			    <%= image_tag("check.png", :size => "23x22", :alt => "Tuttu") %>
+			<% elsif @post.sonuc == false %> 
+			    <%= image_tag("cross.png", :size => "23x22", :alt => "Tutmadı") %>
+				<% else %>
+					<%= image_tag("sonuclanmadi.png", :size => "23x22", :alt => "Sonuçlanmadı") %>
+			<% end %>
+	   </td>
+  </tr>
+  
 
-<p>
-  <b>Misafir:</b>
-  <%= @post.misafir %>
-</p>
 
-<p>
-  <b>Tahmin:</b>
-  <%= @post.tahmin %>
-</p>
 
-<p>
-  <b>Oran:</b>
-  <%= @post.oran %>
-</p>
 
-<p>
-  <b>User:</b>
-  <%= @post.user_id %>
-</p>
-<p>
-  <b>Skor:</b>
-<%= @post.skor%>
-</p>
-<p>
-  <b>Sonuç:</b>
-<%= @post.sonuc%>
-</p>
-<%= link_to 'Düzenle', edit_post_path(@post) %> |
-<%= link_to 'Geri', posts_path %>
+
+</table>
+<br>
+<%= link_to '<< Geri dön', posts_path %>
+<br><br>
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'iddaakosesi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
