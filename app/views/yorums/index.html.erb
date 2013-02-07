@@ -11,7 +11,7 @@
 <% @yorums.each do |yorum| %>
   <tr>
     
-    <td><%= link_to 'Edit', yorum.title %></td>
+    <td><%= link_to yorum.title, yorum %></td>
     
 		<td><%= yorum.user.try(:username) %></td>
   </tr>

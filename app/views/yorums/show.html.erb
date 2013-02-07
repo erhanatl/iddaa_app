@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <b>Yazar:</b>
-  <%= @yorum.user_id %>
+  <%= @yorum.user.try(:username) %>
 </p>
 
 <p>
