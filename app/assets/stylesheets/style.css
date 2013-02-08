@@ -434,4 +434,20 @@ width: 950px;
 	    -webkit-border-radius: 0 0 6px 0;
 	    border-radius: 0 0 6px 0;
 	}
-	
+	.flash {
+	  text-align: center;
+	  width: 100%;
+	  padding: 10px 0 10px 0;
+	  margin-top: 1em;
+	  color: #333333;
+	  border: 1px solid black; 
+	}
+
+	/*
+	 Flash message styles
+	*/
+	.notice {
+	  float: right;
+		color: red;
+		
+	}

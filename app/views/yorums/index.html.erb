@@ -1,23 +1,18 @@
-<h1>Yorumlar</h1>
+<h1>Editör'ün köşesi</h1>
 
-<table>
-  <tr>
-    
-    <th>Başlık</th>
-		<th>Uzman</th>
-   
-  </tr>
 
+<br>
 <% @yorums.each do |yorum| %>
-  <tr>
-    
-    <td><%= link_to yorum.title, yorum %></td>
-    
-		<td><%= yorum.user.try(:username) %></td>
-  </tr>
-<% end %>
-</table>
+<p><%= yorum.created_at.strftime("%d/%m/%Y") %> </p>
+<p>Yazan: <%= yorum.user.try(:username) %> </p>
+ <p><b><%= yorum.title %></b></p>
+<p><%= truncate(yorum.yazi, :length => 150) %><i><%= link_to "...devamı", yorum %></i></p>
 
-<br />
+--------------------------------------------------------------------
+<br>
+<br>
+
+<% end %>
+
 
 
