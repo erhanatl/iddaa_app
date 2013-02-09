@@ -1,20 +1,22 @@
 
+<br>
 
-<p>
-  <b>Yazar:</b>
-  <%= @yorum.user.try(:username) %>
-</p>
+ <h4> <%= @yorum.user.try(:username) %> <h4>
 
-<p>
-  <b>Başlık:</b>
-  <%= @yorum.title %>
-</p>
+	 <h5><%= @yorum.created_at.strftime("%d/%m/%Y") %> </h5>
+ <h1> <%= @yorum.title %> </h1>
 
-<p>
-  <b>Yazı:</b>
   <%= @yorum.yazi %>
-</p>
+	<br>
+	<br>
+	<br>
+<% if user_signed_in? %>
+<%= link_to 'Düzenle', edit_yorum_path(@yorum) %> | <%= link_to '<< Tüm yazılar', yorums_path %>
+
+<% else %>
 
 
-<%= link_to 'Düzenle', edit_yorum_path(@yorum) %> |
-<%= link_to '<< Geri dön', yorums_path %>
+<%= link_to '<< Tüm yazılar', yorums_path %>
+
+		
+			<% end %>
