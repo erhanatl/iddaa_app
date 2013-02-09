@@ -43,6 +43,7 @@ class YorumsController < ApplicationController
   # POST /yorums.json
   def create
     @yorum = Yorum.new(params[:yorum])
+    @yorum.user_id = current_user.id
 
     respond_to do |format|
       if @yorum.save

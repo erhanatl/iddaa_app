@@ -13,8 +13,9 @@
 	
   <div id="main">
     <div id="header">
-      <div id="logo">
-        <h1>İddaa<%= link_to 'Köşesi', root_path %></h1>
+			
+      <div id="logo"><%= link_to (image_tag "logo.png", :alt => "İddaa Köşesi", :size =>"220x220"), root_path %>
+        
         <div class="slogan">Uzmanlardan kazandıran tahminler</div>
       </div>
 			
@@ -27,8 +28,8 @@
         <div class="sidebar">
           <h3>Editör'den</h3>
           <h4>Doğan Gazioğlu</h4>
-          <h5>01 Mart 2013</h5>
-          <p>İddaa Köşesi yenilenen altyapısı ve yeni yüzü ile hizmetinizde..<br /><a href="#">devamı</a></p>
+          <h5>08 Şubat 2013</h5>
+          <p>İddaa Köşesi yenilenen altyapısı ve yeni yüzü ile hizmetinizde..<br /></p>
         </div>
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
 				<div class="sidebar">
@@ -39,15 +40,20 @@
         </div>
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
-          <h3>Yazar ol!</h3>
-          <p>Ben de bu işte Uzman'ım diyorsan, bize katılabilirsin.</p>
-         <h4><p>Katılım şartları için buraya tıkla.</p></h4>
+          <h3>Uyarı!</h3>
+          <p>İddaa Köşesi eğlence amacı ile iddaa oynayan sporseverlere vaat değil fikir verir.</p>
+         <h4><p>İddaa bir oyundur, kumar kötüdür. İhtiyacınız olan geliri elde etmek için çalışmalısınız.</p></h4>
         </div>
+        <%= image_tag  "paperclip.png", :class => "paperclip" %>
+        <div class="sidebar">
+          <h3>Partner</h3>
+          <p>Canlı maç sonuçları <%= link_to "Livescore", "http://www.livescore.in", :target => "_blank" %> tarafından sağlanmaktadır.</p>
         
+        </div>
         
       </div>
 
-
+ 
    
 	  <div id="content">
 			<p class="notice"><%= notice %></p>
@@ -61,7 +67,7 @@
 		
 		
     <p>Copyright &copy; İddaa Köşesi | <%= render :partial => "shared/user_nav"%></p>
-
+		
   </div>
 	
 </div>

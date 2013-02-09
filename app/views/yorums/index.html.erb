@@ -6,13 +6,13 @@
 <p><%= yorum.created_at.strftime("%d/%m/%Y") %> </p>
 <p>Yazan: <%= yorum.user.try(:username) %> </p>
  <p><b><%= yorum.title %></b></p>
-<p><%= truncate(yorum.yazi, :length => 150) %><i><%= link_to "...devamı", yorum %></i></p>
-
+<p><%= truncate(yorum.yazi, :length => 250) %><i><%= link_to "  ...devamı", yorum %></i></p>
+<% end %>
 --------------------------------------------------------------------
 <br>
 <br>
 
-<% end %>
+
 
 
 
