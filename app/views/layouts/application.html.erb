@@ -44,11 +44,16 @@
           <p>İddaa Köşesi eğlence amacı ile iddaa oynayan sporseverlere vaat değil fikir verir.</p>
          <h4><p>İddaa bir oyundur, kumar kötüdür. İhtiyacınız olan geliri elde etmek için çalışmalısınız.</p></h4>
         </div>
+        <%= image_tag  "paperclip.png", :class => "paperclip" %>
+        <div class="sidebar">
+          <h3>Partner</h3>
+          <p>Canlı maç sonuçları <%= link_to "Livescore", "http://www.livescore.in", :target => "_blank" %> tarafından sağlanmaktadır.</p>
         
+        </div>
         
       </div>
 
-
+ 
    
 	  <div id="content">
 			<p class="notice"><%= notice %></p>
@@ -62,7 +67,7 @@
 		
 		
     <p>Copyright &copy; İddaa Köşesi | <%= render :partial => "shared/user_nav"%></p>
-		<p><%= link_to "Livescore", "http://www.livescore.in", :target => "_blank" %> 
+		
   </div>
 	
 </div>
