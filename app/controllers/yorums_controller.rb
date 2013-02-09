@@ -2,6 +2,9 @@ class YorumsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   # GET /yorums
   # GET /yorums.json
+  def sonyorum
+    @yorum = Yorum.last
+  end
   def index
     @yorums = Yorum.all
 
@@ -15,7 +18,7 @@ class YorumsController < ApplicationController
   # GET /yorums/1.json
   def show
     @yorum = Yorum.find(params[:id])
-    @yorum.user_id = current_user.id
+   
     
     respond_to do |format|
       format.html # show.html.erb

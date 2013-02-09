@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
         "application"
       end
     end
+    
+    before_filter :get_yorum
+
+    
+      def get_yorum
+        @sonyorum = Yorum.last
+      end
 end

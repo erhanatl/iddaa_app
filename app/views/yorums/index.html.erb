@@ -3,14 +3,14 @@
 
 <br>
 <% @yorums.each do |yorum| %>
-<p><%= yorum.created_at.strftime("%d/%m/%Y") %> </p>
-<p>Yazan: <%= yorum.user.try(:username) %> </p>
+<h5><%= yorum.created_at.strftime("%d/%m/%Y") %> </h5>
+<h4>Yazan: <%= yorum.user.try(:username) %> </h4>
  <p><b><%= yorum.title %></b></p>
-<p><%= truncate(yorum.yazi, :length => 250) %><i><%= link_to "  ...devamı", yorum %></i></p>
-<% end %>
---------------------------------------------------------------------
-<br>
-<br>
+<p><%= truncate(yorum.yazi, :length => 250) %><i><h4><%= link_to "  ...devamı", yorum %></h4></i></p>
+
+<hr>
+<br><br><% end %>
+
 
 
 
