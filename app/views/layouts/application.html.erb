@@ -28,7 +28,7 @@
         <div class="sidebar">
           <h3>Editör'den</h3>
          
-						<%= render :partial => "shared/side1"%>
+						<%= render :partial => "shared/editorden"%>
           
         </div>
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
@@ -50,6 +50,15 @@
           <p>Canlı maç sonuçları <%= link_to "Livescore", "http://www.livescore.in", :target => "_blank" %> tarafından sağlanmaktadır.</p>
         
         </div>
+				
+        <%= image_tag  "paperclip.png", :class => "paperclip" %>
+        <div class="sidebar">
+          <h3>İstatistik <small>(beta)</small></h3>
+					
+						<%= render :partial => "shared/oranlar"%>
+          
+        </div>
+				
         
       </div>
 
@@ -60,13 +69,13 @@
 			 <p class="alert"><%= alert %></p>
 			<%= yield %>
 			
-      
+			
     </div>
   </div>
   <div id="footer">
 		
 		
-    <p>Copyright &copy; İddaa Köşesi | <%= render :partial => "shared/user_nav"%></p>
+    <p>Copyright &copy; İddaa Köşesi | <%= render "shared/user_nav"%></p>
 		
   </div>
 	

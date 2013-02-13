@@ -1,0 +1,11 @@
+
+  
+  <h4><%= @sonyorum.user.try(:username) %></h4>
+	<h5><%= @sonyorum.created_at.strftime("%d/%m/%Y") %></h5>
+  <b><%= @sonyorum.title %></b>
+	<br>
+	<br>
+
+  
+  <%= truncate(@sonyorum.yazi, :length => 80) %><i><%= link_to "  devamı>>", @sonyorum %></i>
+

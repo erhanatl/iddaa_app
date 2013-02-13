@@ -3,14 +3,14 @@
 <table width="100%" class="bordered">
   <tr>
     <th width="5%">Kod</th>
-    <th width="20%">Ev sahibi</th>
-    <th width="20%">Misafir</th>
-		<th width="8%">Tahmin</th>
-    <th width="8%">Oran</th>
+    <th width="23%">Ev sahibi</th>
+    <th width="23%">Misafir</th>
+		<th width="9%">Tahmin</th>
+    <th width="6%">Oran</th>
     <th width="9%">Sembol</th>
 		<th>Uzman</th>
-    <th width="5%">Skor</th>
-    <th width="8%">Sonuç</th>
+    <th width="7%">Skor</th>
+    <th width="7%">Sonuç</th>
   </tr>
 	
 <% @posts.each do |post| %>
@@ -22,10 +22,10 @@
 			<%= link_to post.kod, post %>
 			<% end %>
 		</td>
-    <td width="20%"><%= link_to post.ev_sahibi, post %></td>
-    <td width="20%"><%= post.misafir %></td>
-    <td width="5%"><%= post.tahmin %></td>
-    <td width="8%"><%= post.oran %></td> 
+    <td width="23%"><%= link_to post.ev_sahibi, post %></td>
+    <td width="23%"><%= post.misafir %></td>
+    <td width="9%"><center><%= post.tahmin %></center></td>
+    <td width="6%"><center><%= number_with_precision(post.oran, :precision => 2) %></center></td> 
 		<td width="9%"><% if post.sembol == 1 %>  
 			<%= image_tag('banko.png', :size => '50x22') %>
 		<% elsif post.sembol == 2 %>
@@ -36,14 +36,14 @@
 			<%= image_tag('oynanmaz.png', :size => '50x22') %>
 			<% end %></td>
 			<td><%= post.user.try(:username) %></td> 
-	    <td width="8%"><%= post.skor %></td>
-			<td width="8%"><% if post.sonuc == true %>
+	    <td width="7%"><center><%= post.skor %></center></td>
+			<td width="7%"><center><% if post.sonuc == true %>
 			    <%= image_tag("check.png", :size => "23x22", :alt => "Tuttu") %>
 			<% elsif post.sonuc == false %> 
 			    <%= image_tag("cross.png", :size => "23x22", :alt => "Tutmadı") %>
 				<% else %>
 					<%= image_tag("sonuclanmadi.png", :size => "23x22", :alt => "Sonuçlanmadı") %>
-			<% end %>
+			<% end %></center>
 	   </td>
  
 	</tr>
@@ -54,5 +54,4 @@
 </table>
 
 <br />
-
 

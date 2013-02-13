@@ -4,7 +4,7 @@
 <br>
 <% @yorums.each do |yorum| %>
 <h5><%= yorum.created_at.strftime("%d/%m/%Y") %> </h5>
-<h4>Yazan: <%= yorum.user.try(:username) %> </h4>
+<h4><%= yorum.user.try(:username) %> </h4>
  <p><b><%= yorum.title %></b></p>
 <p><%= truncate(yorum.yazi, :length => 250) %><i><h4><%= link_to "  ...devamı", yorum %></h4></i></p>
 

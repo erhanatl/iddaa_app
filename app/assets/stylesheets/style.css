@@ -367,7 +367,8 @@ width: 950px;
 	    border-radius: 6px;
 	    -webkit-box-shadow: 0 1px 1px #ccc; 
 	    -moz-box-shadow: 0 1px 1px #ccc; 
-	    box-shadow: 0 1px 1px #ccc;         
+	    box-shadow: 0 1px 1px #ccc;
+			         
 	}
 
 	.bordered tr:hover {
@@ -379,13 +380,20 @@ width: 950px;
 	    transition: all 0.1s ease-in-out;     
 	}    
     
-	.bordered td, .bordered th {
+	.bordered td {
 	    border-left: 1px solid #ccc;
 	    border-top: 1px solid #ccc;
 	    padding: 2px;
-	    text-align: left;    
+	    text-align: left;
+			font-size: 12px;    
 	}
-
+	.bordered th {
+		    border-left: 1px solid #ccc;
+		    border-top: 1px solid #ccc;
+		    padding: 2px;
+		    text-align: center;
+		    
+		}
 	.bordered th {
 	    background-color: #dce9f9;
 	    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
@@ -451,3 +459,78 @@ width: 950px;
 		color: red;
 		
 	}
+	
+	.borderedside {
+		width: 200px;
+	    border: solid #ccc 1px;
+	    -moz-border-radius: 6px;
+	    -webkit-border-radius: 6px;
+	    border-radius: 6px;
+	    -webkit-box-shadow: 0 1px 1px #ccc; 
+	    -moz-box-shadow: 0 1px 1px #ccc; 
+	    box-shadow: 0 1px 1px #ccc;         
+	}
+
+	.borderedside tr:hover {
+	    background: #fbf8e9;
+	    -o-transition: all 0.1s ease-in-out;
+	    -webkit-transition: all 0.1s ease-in-out;
+	    -moz-transition: all 0.1s ease-in-out;
+	    -ms-transition: all 0.1s ease-in-out;
+	    transition: all 0.1s ease-in-out;     
+	}    
+    
+	.borderedside td, .borderedside th {
+	    border-left: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	    padding: 2px;
+	    text-align: center;    
+	}
+
+	.borderedside th {
+	    background-color: #dce9f9;
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+	    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+	    background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+	    background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+	    background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+	    background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+	    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+	    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+	    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+	    border-top: none;
+	    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+	}
+
+	.borderedside td:first-child, .bordered th:first-child {
+	    border-left: none;
+	}
+
+	.borderedside th:first-child {
+	    -moz-border-radius: 6px 0 0 0;
+	    -webkit-border-radius: 6px 0 0 0;
+	    border-radius: 6px 0 0 0;
+	}
+
+	.borderedside th:last-child {
+	    -moz-border-radius: 0 6px 0 0;
+	    -webkit-border-radius: 0 6px 0 0;
+	    border-radius: 0 6px 0 0;
+	}
+
+	.borderedside th:only-child{
+	    -moz-border-radius: 6px 6px 0 0;
+	    -webkit-border-radius: 6px 6px 0 0;
+	    border-radius: 6px 6px 0 0;
+	}
+
+	.borderedside tr:last-child td:first-child {
+	    -moz-border-radius: 0 0 0 6px;
+	    -webkit-border-radius: 0 0 0 6px;
+	    border-radius: 0 0 0 6px;
+	}
+
+	.borderedside tr:last-child td:last-child {
+	    -moz-border-radius: 0 0 6px 0;
+	    -webkit-border-radius: 0 0 6px 0;
+	    border-radius: 0 0 6px 0;

@@ -18,4 +18,10 @@ class ApplicationController < ActionController::Base
       def get_yorum
         @sonyorum = Yorum.last
       end
+      
+    before_filter :users
+      
+      def users
+      @users = User.all
+    end
 end
