@@ -1,0 +1,21 @@
+<table class="borderedside">
+  <tr>
+    <th>Yazar</th>
+		<th>Oran</th>
+		 </tr>
+
+<% @users.each do |user| %>
+
+<% puan = user.posts.where(:sonuc => true) %>
+
+
+ 
+ <tr>
+  <td ><%= user.username %></td>
+	<td ><%= number_with_precision(puan.average(:oran), :precision => 2) %></td>
+	 </tr>
+
+ <% end %>
+
+</table>
+

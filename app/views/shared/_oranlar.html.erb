@@ -3,18 +3,21 @@
     <th>Yazar</th>
 		<th>Oran</th>
 		 </tr>
+
 <% @users.each do |user| %>
 
 <% @toplam = user.posts.count %>
 <% @tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 <% @nihaioran = (@tutan.to_f / @toplam * 100) %>
 
-<% if @toplam > 0 %>
-<tr>
+ <% if @toplam > 0 %>
+ <tr>
   <td ><%= user.username %></td>
 	<td >%<%= @nihaioran.to_i %></td>
 	 </tr>
 
-<% end %>
+ <% end %>
 <% end %>
 </table>
+
+
