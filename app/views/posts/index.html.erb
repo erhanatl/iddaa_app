@@ -37,12 +37,15 @@
 			<% end %></td>
 			<td><%= post.user.try(:username) %></td> 
 	    <td width="7%"><center><%= post.skor %></center></td>
-			<td width="7%"><center><% if post.sonuc == true %>
+			<td width="7%"><center><% if post.sembol == 4 %>
+				
+				<% elsif post.sonuc == true && post.sembol != 4 %>
 			    <%= image_tag("check.png", :size => "23x22", :alt => "Tuttu") %>
-			<% elsif post.sonuc == false %> 
+			<% elsif post.sonuc == false && post.sembol != 4 %> 
 			    <%= image_tag("cross.png", :size => "23x22", :alt => "Tutmadı") %>
-				<% else %>
+				<% elsif post.sonuc == nil && post.sembol != 4 %>
 					<%= image_tag("sonuclanmadi.png", :size => "23x22", :alt => "Sonuçlanmadı") %>
+					
 			<% end %></center>
 	   </td>
  
