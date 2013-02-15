@@ -54,6 +54,11 @@
         <%= image_tag  "paperclip.png", :class => "paperclip" %>
         <div class="sidebar">
           <h3>İstatistik <small>(beta)</small></h3>
+					
+					<h4>Puan Tablosu</h4>
+						
+        <%= render :partial => "shared/puanlar"%>
+					
 					<h4>Tutturma Oranı</h4>
 						<%= render :partial => "shared/oranlar"%>
 				
@@ -61,6 +66,7 @@
 						
           <%= render :partial => "shared/oransal"%>
 					<h5>Tutan tahminler baz alınmıştır</h5>
+					
         </div>
 				
         
