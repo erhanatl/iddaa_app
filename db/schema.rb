@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130170401) do
+ActiveRecord::Schema.define(:version => 20130215134455) do
 
   create_table "ligs", :id => false, :force => true do |t|
     t.string "id",   :limit => nil, :null => false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130130170401) do
     t.integer  "sembol"
     t.string   "skor"
     t.boolean  "sonuc"
+    t.date     "tarih"
   end
 
   create_table "sembols", :force => true do |t|
@@ -52,6 +53,10 @@ ActiveRecord::Schema.define(:version => 20130130170401) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "username"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

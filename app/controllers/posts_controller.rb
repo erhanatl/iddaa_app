@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all(:order => 'id DESC', :limit =>20)
+    @posts = Post.all(:order => 'tarih DESC', :limit => '30')
+   
     respond_to do |format|
       format.html  # index.html.erb
       format.json { render json: @posts }

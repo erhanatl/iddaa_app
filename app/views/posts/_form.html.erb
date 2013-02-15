@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <b><%= f.label :tarih %></b><br /></b>
+    <%= f.date_select :tarih, :use_month_numbers => true, :default => Time.now, :order => [:day, :month, :year] %>
+  </div>
+	
   <div class="field">
     <b><%= f.label :kod %></b><br /></b>
     <%= f.number_field :kod %>
@@ -43,7 +47,8 @@
     <b><%= f.label :skor %></b><br />
     <%= f.text_field :skor %> 
   </div>
-  <div class="field">
+  
+	<div class="field">
     <b><%= f.label :sonuç %></b><br /> 
     <%= f.select :sonuc, {"-" => nil, "Tuttu" => true, "Tutmadı" => false}%> 
   </div>

@@ -3,5 +3,5 @@ class Post < ActiveRecord::Base
   validates :kod, :presence => {:message => 'eksik'}
   validates :ev_sahibi, :presence => {:message => 'eksik'}
   validates :misafir, :presence => {:message => 'eksik'}
-  attr_accessible :ev_sahibi, :kod, :misafir, :oran, :tahmin, :user_id, :sembol, :skor, :sonuc
+  attr_accessible :ev_sahibi, :kod, :misafir, :oran, :tahmin, :user_id, :sembol, :skor, :sonuc, :tarih
 end

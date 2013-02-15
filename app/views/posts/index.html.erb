@@ -1,7 +1,8 @@
-<h1>Taze tahminler</h1>
-
+<br>
+<br>
 <table width="100%" class="bordered">
-  <tr>
+  
+	<tr>
     <th width="5%">Kod</th>
     <th width="23%">Ev sahibi</th>
     <th width="23%">Misafir</th>
@@ -12,10 +13,14 @@
     <th width="7%">Skor</th>
     <th width="7%">Sonuç</th>
   </tr>
-	
-<% @posts.each do |post| %>
-  <tr>
-    <td width="5%"><% if user_signed_in? %>
+ <% @posts.group_by(&:tarih).each do |day, posts| %>
+<tr>
+   <td colspan="9"><center><%= day.try(:strftime, "%d %m %Y - %A") %></center></td>
+</tr>
+<% posts.each do |post| %>
+ 
+	<tr>
+		<td width="5%"><% if user_signed_in? %>
 			
 			<%= link_to post.kod, edit_post_path(post) %>
 			<% else %>
@@ -53,8 +58,7 @@
   
 <% end %>
 
-
+<% end %>
 </table>
 
-<br />
 
