@@ -6,7 +6,7 @@
 
 <% @users.each do |user| %>
 
-<% toplam = user.posts.count %>
+<% toplam = user.posts.where('sonuc IS NOT NULL').count%>
 <% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 <% nihaioran = (tutan.to_f / toplam * 100) %>
 
