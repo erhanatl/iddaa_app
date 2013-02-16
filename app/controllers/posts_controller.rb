@@ -3,7 +3,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all(:order => 'tarih DESC', :limit => '30')
+    @posts = Post.find(:all, 
+        :order => "tarih", 
+        :conditions => ['tarih >= ?', Date.today])
    
     respond_to do |format|
       format.html  # index.html.erb
@@ -49,7 +51,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Eklendi.' }
+        format.html { redirect_to root_path, notice: 'Eklendi.' }
         format.json { render json: @post, status: :created, location: @post }
       else
         format.html { render action: "new" }

@@ -11,8 +11,8 @@
     </div>
   <% end %>
   <div class="field">
-    <b><%= f.label :tarih %></b><br /></b>
-    <%= f.date_select :tarih, :use_month_numbers => true, :default => Time.now, :order => [:day, :month, :year] %>
+    <b><%= f.label :tarih %></b> </br>
+    <%= f.date_select :tarih, :use_month_numbers => true, :default => Time.now, :order => [:day, :month, :year] %><span> Maçın oynanacağı tarih. Seçilmez ise bugünün tarihi ile maç eklenir.</span>
   </div>
 	
   <div class="field">
