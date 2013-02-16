@@ -3,9 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.find(:all, 
-        :order => "tarih", 
-        :conditions => ['tarih >= ?', Date.today])
+   @posts = Post.all(:order => 'tarih DESC', :limit => '30')
    
     respond_to do |format|
       format.html  # index.html.erb

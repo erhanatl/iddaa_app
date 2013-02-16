@@ -25,6 +25,8 @@ class ApplicationController < ActionController::Base
       @users = User.all
       
     end
-    
+  
+ 
+  
     
 end
