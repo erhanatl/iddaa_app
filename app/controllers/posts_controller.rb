@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-   @posts = Post.all(:order => 'kod ASC', :limit => '30')
+   @posts = Post.all(:order => 'kod DESC', :limit => '30')
    
     respond_to do |format|
       format.html  # index.html.erb
