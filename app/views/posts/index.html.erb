@@ -13,7 +13,7 @@
     <th width="7%">Skor</th>
     <th width="7%">Sonuç</th>
   </tr>
- <% @posts.group_by(&:tarih).each do |day, posts| %>
+ <% @posts.group_by(&:tarih).sort.reverse.each do |day, posts| %>
 <tr>
    <td colspan="9"><center><%= day.try(:strftime, "%d %m %Y - %A") %></center></td>
 </tr>

@@ -11,11 +11,11 @@
 <% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 <% oranu = puan.average(:oran) %>
 <% nihaioran = (tutan.to_f / toplam ) %>
- 
+
  <% if toplam > 0 && tutan > 0 %>
  <tr>
   <td ><%= user.username %></td>
-	<td ><%= ((oranu * 3) + (nihaioran * 5) + (toplam * 0.005)).to_i * 10 %></td>
+	<td ><%= son = ((oranu * 2) + (nihaioran * 5) + (tutan * 0.006) + (toplam * 0.002)).to_i * 10 %></td>
 	 </tr>
 	 <% end %>
  

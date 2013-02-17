@@ -4,7 +4,7 @@
 		<th>Oran</th>
 		 </tr>
 
-<% @users.each do |user| %>
+<% @users.sort.each do |user| %>
 <% toplam = user.posts.count %>
 <% puan = user.posts.where(:sonuc => true) %>
 <% tutan = user.posts.count(:conditions => { :sonuc => true }) %>

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-   @posts = Post.all(:order => 'tarih DESC', :limit => '30')
+   @posts = Post.all(:order => 'kod ASC', :limit => '30')
    
     respond_to do |format|
       format.html  # index.html.erb
@@ -39,6 +39,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    
   end
 
   # POST /posts
