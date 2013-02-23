@@ -6,4 +6,8 @@ class Post < ActiveRecord::Base
   attr_accessible :ev_sahibi, :kod, :misafir, :oran, :tahmin, :user_id, :sembol, :skor, :sonuc, :tarih
   before_save { |post| post.ev_sahibi = post.ev_sahibi.titleize }
   before_save { |post| post.misafir = post.misafir.titleize }
+
+
+  scope :aylik, where(:tarih => Time.now.beginning_of_month..Time.now.end_of_month)
+
 end
