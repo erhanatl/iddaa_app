@@ -10,12 +10,15 @@
 	<% puan = user.posts.where(:sonuc => true) %>
 	<% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 	<% oranu = puan.average(:oran) %>
-	<% nihaioran = (tutan.to_f / toplam ) %>
+	<% orans = puan.sum(:oran) %>
+	<% son_puan = (oranu.to_i * 10) + orans.to_i + (tutan * 2) + toplam + (tutan.to_f / toplam * 100).to_i %>
+
+	
 
 	 <% if toplam > 0 && tutan > 0 %>
 		 <tr>
 			  <td ><%= user.username %></td>
-			  <td ><%= son = ((oranu * 2) + (nihaioran * 5) + (tutan * 0.006) + (toplam * 0.002)).to_i * 10 %></td>
+			  <td ><%= son_puan %></td>
 		 </tr>
 	 <% end %>
  

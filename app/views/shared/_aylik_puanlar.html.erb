@@ -10,7 +10,8 @@
 	<% puan = user.posts.where(:sonuc => true) %>
 	<% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 	<% orans = puan.aylik.sum(:oran) %>
-	<% aylik_puan = orans.to_i + (tutan * 2) + toplam %>
+	<% oranu = puan.average(:oran) %>
+	<% aylik_puan = (oranu.to_i * 10) + orans.to_i + (tutan * 2) + toplam + (tutan.to_f / toplam * 100).to_i %>
 
 	 <% if toplam > 0 && tutan > 0 %>
 		 <tr>
