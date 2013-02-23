@@ -1,23 +1,22 @@
 <table class="borderedside">
-  <tr>
-    <th>Yazar</th>
+    <tr>
+	    <th>Yazar</th>
 		<th>Oran</th>
-		 </tr>
+	</tr>
 
-<% @users.each do |user| %>
+	<% @users.each do |user| %>
 
-<% toplam = user.posts.where('sonuc IS NOT NULL').sort.count%>
-<% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
-<% nihaioran = (tutan.to_f / toplam * 100) %>
+		<% toplam = user.posts.where('sonuc IS NOT NULL').count%>
+		<% tutan = user.posts.count(:conditions => { :sonuc => true }) %>
 
- <% if toplam > 0 %>
- <tr>
-  <td ><%= user.username %></td>
-	<td >%<%= nihaioran.to_i %></td>
-	 </tr>
+			<% if toplam > 0 %>
+				<tr>
+					<td ><%= user.username %></td>
+					<td >%<%= nihaioran = (tutan.to_f / toplam * 100).to_i %></td>
+				</tr>
 
- <% end %>
-<% end %>
+			<% end %>
+	<% end %>
 </table>
 
 

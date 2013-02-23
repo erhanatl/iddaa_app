@@ -15,7 +15,7 @@
   </tr>
  <% @posts.group_by(&:tarih).sort.reverse.each do |day, posts| %>
 <tr>
-   <td colspan="9"><center><%= day.try(:strftime, "%d %m %Y - %A") %></center></td>
+   <td colspan="9"><center><%= l(day, :format => "%d %m %Y - %A") %></center></td>
 </tr>
 <% posts.each do |post| %>
  
