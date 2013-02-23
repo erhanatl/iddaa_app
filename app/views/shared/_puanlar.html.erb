@@ -15,7 +15,7 @@
 
 	
 
-	 <% if toplam > 0 && tutan > 0 %>
+	 <% unless toplam == 0 || tutan == 0 %>
 		 <tr>
 			  <td ><%= user.username %></td>
 			  <td ><%= son_puan %></td>
